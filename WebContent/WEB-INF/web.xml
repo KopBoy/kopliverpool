@@ -12,20 +12,28 @@
 		<param-value>classpath:log4j-config.xml</param-value>
 	</context-param>
 	<context-param>
+		<description>自动扫描Log4j配置文件</description>
+		<param-name>log4jRefreshInterval</param-name>
+		<param-value>600000</param-value>
+	</context-param>  
+	<context-param>
 		<description>Spring的核心配置文件路径</description>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
 			<!-- classpath:applicationContext.xml, -->
-			classpath:applicationContext-security.xml
+			classpath:system-context.xml
 		</param-value>
 	</context-param>
 
 	<!-- listener 配置 -->
 	<listener>
+		<description>Log4j加载监听器</description>
+		<listener-class>org.springframework.web.util.Log4jConfigListener</listener-class>
+	</listener> 
+	<listener>
 		<description>Spring加载监听器</description>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>
-
 	<listener>
 		<description>SpringUtil加载监听器</description>
 		<listener-class>com.kopliverpool.framework.spring.InitSpringUtilListener</listener-class>
@@ -68,7 +76,7 @@
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
 		<init-param>
 			<param-name>contextConfigLocation</param-name>
-			<param-value>classpath:web-config.xml</param-value>
+			<param-value>classpath:system-webmvc.xml</param-value>
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>

@@ -41,7 +41,7 @@ public class LoginController extends BaseController{
 	 * @Author KOP
 	 * Create Date: 2014年11月2日 上午8:39:34
 	 */
-	@RequestMapping(value = "/loginByModelMap.do", method = RequestMethod.POST)
+	@RequestMapping(value = "/loginByModelMap.do", method = RequestMethod.GET)
 	public String loginByModelMap(@RequestParam("username") String username, @RequestParam("password") String password, ModelMap map){
 		System.out.println("method: loginByModelMap");
 		System.out.println("username:" + username + "   password:" + password);

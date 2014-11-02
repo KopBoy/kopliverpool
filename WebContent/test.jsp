@@ -4,10 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>欢迎来到首页面</title>
+<title>Insert title here</title>
 </head>
 <body>
-<center><a href="../../../j_spring_security_logout">退出</a></center>
-<center><h1>欢迎${requestScope.user.username}来到首页面.....测试提交三</h1></center>
+TEStaaaaaaaaaaaa
 </body>
 </html>
