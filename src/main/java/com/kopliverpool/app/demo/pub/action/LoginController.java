@@ -1,7 +1,5 @@
 package com.kopliverpool.app.demo.pub.action;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.UUID;
 
 import org.springframework.stereotype.Controller;
@@ -41,8 +39,8 @@ public class LoginController extends BaseController{
 	 * @Author KOP
 	 * Create Date: 2014年11月2日 上午8:39:34
 	 */
-	@RequestMapping(value = "/loginByModelMap.do", method = RequestMethod.GET)
-	public String loginByModelMap(@RequestParam("username") String username, @RequestParam("password") String password, ModelMap map){
+	@RequestMapping(value = "/loginByModelMap.do", method = RequestMethod.POST)
+	public String loginByModelMap(@RequestParam("j_username") String username, @RequestParam("j_password") String password, ModelMap map){
 		System.out.println("method: loginByModelMap");
 		System.out.println("username:" + username + "   password:" + password);
 		log.info("username:" + username + "   password:" + password);

@@ -18,9 +18,29 @@
 	<!-- 让Spring通过自动扫描来查询和管理Bean -->
 	<context:component-scan base-package="com.kopliverpool" />
 	
+	<!-- 读取属性文件 -->
+	<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>classpath:config.properties</value>
+			</list>
+		</property>
+	</bean>
+	
+	<!-- config.properties参数 -->
+	<bean id="configParamMap" class="java.util.HashMap">
+		<constructor-arg>
+			<map>
+				<entry key="security.systemSign" value="${security.systemSign}"></entry>
+				<entry key="database.type" value="${database.type}"></entry>
+			</map>
+		</constructor-arg>
+	</bean>
 	
 	
 	<!-- 导入Spring Security配置 -->
 	<import resource="classpath:system-security.xml"/>
+	<!-- 导入Spring Security配置 -->
+	<import resource="classpath:system-hibernate.xml"/>
 	
 </beans>
