@@ -48,7 +48,7 @@
 	</bean> -->
 	
 	<!--proxool 连接池 -->
-    <bean id="dataSource" class="com.hzwealth.core.framework.datasource.ProxoolDataSourceEx">
+    <bean id="dataSource" class="com.kopliverpool.core.framework.datasource.ProxoolDataSourceEx">
         <property name="driver" value="${jdbc.driverClassName}"/>
         <property name="driverUrl" value="${jdbc.url}"/>
         <property name="user" value="${jdbc.username}"/>
@@ -96,12 +96,12 @@
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="packagesToScan">
 			<list>
-				<value>com.hzwealth.**.model.</value>
+				<value>com.kopliverpool.**.model.</value>
 			</list>
 		</property>
 		<property name="annotatedClasses">
 			<list>
-				<value>com.hzwealth.core.framework.hibernate.SimpleModel</value>
+				<value>com.kopliverpool.core.framework.hibernate.SimpleModel</value>
 			</list>
 		</property>
 		<property name="mappingJarLocations">
@@ -183,8 +183,8 @@
 	<aop:aspectj-autoproxy proxy-target-class="true"></aop:aspectj-autoproxy>
 	<aop:config>
 		<!-- 创建自动代理, 用于拦截平台中所有的业务类方法 -->
-		<aop:advisor pointcut="execution(* com.hzwealth..*Mgr.*(..))" advice-ref="txAdvice"/>
-		<aop:advisor pointcut="execution(* com.hzwealth..*Handler.*(..))" advice-ref="txAdvice"/>
+		<aop:advisor pointcut="execution(* com.kopliverpool..*Mgr.*(..))" advice-ref="txAdvice"/>
+		<aop:advisor pointcut="execution(* com.kopliverpool..*Handler.*(..))" advice-ref="txAdvice"/>
 	</aop:config>
 	
 	<!-- 缓存管理器配置 -->
