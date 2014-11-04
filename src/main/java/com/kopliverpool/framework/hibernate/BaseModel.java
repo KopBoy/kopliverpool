@@ -28,7 +28,6 @@ public class BaseModel implements Serializable, Comparable<BaseModel>{
 	 * UID
 	 */
 	private static final long serialVersionUID = 1L;
-	
 	private String Id;
 
 	@Override
