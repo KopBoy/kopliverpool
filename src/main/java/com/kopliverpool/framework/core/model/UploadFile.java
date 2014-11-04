@@ -1,7 +1,9 @@
 package com.kopliverpool.framework.core.model;
 
+import java.io.Serializable;
 
-public class UploadFile extends BaseModel{
+
+public class UploadFile implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 

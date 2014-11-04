@@ -1,6 +1,6 @@
 package com.kopliverpool.app.demo.pub.model;
 
-import com.kopliverpool.framework.core.model.BaseModel;
+import com.kopliverpool.framework.hibernate.BaseModel;
 
 /** 
  *

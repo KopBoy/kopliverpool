@@ -1,5 +1,7 @@
 package com.kopliverpool.framework.core.model;
 
+import java.io.Serializable;
+
 
 /** 
  *
@@ -14,7 +16,7 @@ package com.kopliverpool.framework.core.model;
  * 2014年7月21日	 KOP          1.0       1.0 Version 
  * </pre>
  */
-public class ResponseResult extends BaseModel{
+public class ResponseResult implements Serializable{
 
 	private static final long serialVersionUID = 1L;
 

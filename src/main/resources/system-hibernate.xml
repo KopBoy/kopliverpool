@@ -48,7 +48,7 @@
 	</bean> -->
 	
 	<!--proxool 连接池 -->
-    <bean id="dataSource" class="com.kopliverpool.core.framework.datasource.ProxoolDataSourceEx">
+    <bean id="dataSource" class="com.kopliverpool.framework.core.datasource.ProxoolDataSourceEx">
         <property name="driver" value="${jdbc.driverClassName}"/>
         <property name="driverUrl" value="${jdbc.url}"/>
         <property name="user" value="${jdbc.username}"/>
@@ -101,16 +101,8 @@
 		</property>
 		<property name="annotatedClasses">
 			<list>
-				<value>com.kopliverpool.core.framework.hibernate.SimpleModel</value>
+				<value>com.kopliverpool.framework.hibernate.SimpleModel</value>
 			</list>
-		</property>
-		<property name="mappingJarLocations">
-			<list>
-				<value>WEB-INF/lib/org-fireflow-engine-*.jar</value>
-			</list>
-		</property>
-		<property name="lobHandler">
-			<ref bean="defaltLobHandler"/>
 		</property>
 		<property name="hibernateProperties">
 			<props>

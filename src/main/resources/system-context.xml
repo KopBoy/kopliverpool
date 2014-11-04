@@ -31,7 +31,6 @@
 	<bean id="configParamMap" class="java.util.HashMap">
 		<constructor-arg>
 			<map>
-				<entry key="security.systemSign" value="${security.systemSign}"></entry>
 				<entry key="database.type" value="${database.type}"></entry>
 			</map>
 		</constructor-arg>

@@ -29,7 +29,7 @@
     </appender>
     
     <logger name="org.hibernate" additivity="false">
-        <level value="DEBUG"/>
+        <level value="INFO"/>
         <appender-ref ref="FILE"/>
         <appender-ref ref="CONSOLE"/>
     </logger>
@@ -40,39 +40,39 @@
 	    <appender-ref ref="CONSOLE"/>
 	</logger>
     <logger name="net.sf.ehcache.distribution" additivity="false">
-    	<level value="DEBUG"/>
+    	<level value="INFO"/>
 	    <appender-ref ref="FILE"/>
 	    <appender-ref ref="CONSOLE"/>
 	</logger>
 	<logger name="org.hibernate.cache" additivity="false">
-		<level value="DEBUG"/>
+		<level value="INFO"/>
 	    <appender-ref ref="CONSOLE"/>
 	    <appender-ref ref="FILE"/>
 	</logger>
 	<logger name="org.hibernate.transaction" additivity="false">
-		<level value="DEBUG"/>
+		<level value="INFO"/>
 	    <appender-ref ref="CONSOLE"/>
 	    <appender-ref ref="FILE"/>
 	</logger>
     
     <logger name="org.springframework" additivity="false">
-        <level value="DEBUG"/>
+        <level value="INFO"/>
         <appender-ref ref="CONSOLE"/>
         <appender-ref ref="FILE"/>
     </logger>
     
     <logger name="org.apache.struts2" additivity="false">
-        <level value="DEBUG"/>
+        <level value="INFO"/>
         <appender-ref ref="CONSOLE"/>
         <appender-ref ref="FILE"/>
     </logger>
     <logger name="com.opensymphony.xwork2" additivity="false">
-        <level value="DEBUG"/>
+        <level value="INFO"/>
         <appender-ref ref="CONSOLE"/>
         <appender-ref ref="FILE"/>
     </logger>
     <logger name="org.apache.cxf" additivity="false">
-        <level value="DEBUG"/>
+        <level value="INFO"/>
         <appender-ref ref="CONSOLE"/>
         <appender-ref ref="FILE"/>
     </logger>
@@ -84,7 +84,7 @@
     </logger>
     
     <root>
-        <level value="DEBUG"/>
+        <level value="INFO"/>
         <appender-ref ref="CONSOLE"/>
         <appender-ref ref="FILE"/>
     </root>
