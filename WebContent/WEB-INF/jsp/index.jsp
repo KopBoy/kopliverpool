@@ -10,7 +10,8 @@
 <body>
 <!-- ../../../j_spring_security_logout -->
 <c:url value="../../../j_spring_security_logout" var="logoutUrl"/>
-<center><a href="${logoutUrl }">退出</a></center>
-<center><h1>欢迎${requestScope.user.username}来到首页面.....测试提交三</h1></center>
+<center><a href="./logout.do">退出</a></center>
+<center><h1>欢迎${requestScope.user.username}来到首页面.....</h1></center>
+<center><h1>欢迎${requestScope.username}来到首页面.....</h1></center>
 </body>
 </html>

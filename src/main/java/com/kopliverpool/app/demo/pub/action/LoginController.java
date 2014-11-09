@@ -2,6 +2,10 @@ package com.kopliverpool.app.demo.pub.action;
 
 import java.util.UUID;
 
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -95,14 +99,20 @@ public class LoginController extends BaseController{
 		return model;
 	}
 	
-	@RequestMapping(value="/login.do", method = RequestMethod.GET)
+	@RequestMapping(value="/showloginPage.do", method = RequestMethod.GET)
 	public String login(){
 		log.info("start login");
 		return "login";
 	}
 	
 	@RequestMapping(value="/home.do", method = RequestMethod.GET)
-	public String home(){
+	public String home(HttpServletRequest request){
+		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		String username = principal.toString();
+		if(principal instanceof UserDetails){
+			username = ((UserDetails)principal).getUsername();
+		}
+		request.setAttribute("username", username);
 		return "index";
 	}
 	
