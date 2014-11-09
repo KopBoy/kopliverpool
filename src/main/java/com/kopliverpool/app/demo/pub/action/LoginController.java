@@ -27,7 +27,6 @@ import com.kopliverpool.framework.springmvc.BaseController;
 * </pre>
 */
 @Controller
-@RequestMapping(value = "/app/demo/pub")
 public class LoginController extends BaseController{
 
 	/**
@@ -39,10 +38,8 @@ public class LoginController extends BaseController{
 	 * @Author KOP
 	 * Create Date: 2014年11月2日 上午8:39:34
 	 */
-	@RequestMapping(value = "/loginByModelMap.do", method = RequestMethod.POST)
+	@RequestMapping(value = "/app/demo/pub/loginByModelMap.do", method = RequestMethod.POST)
 	public String loginByModelMap(@RequestParam("j_username") String username, @RequestParam("j_password") String password, ModelMap map){
-		System.out.println("method: loginByModelMap");
-		System.out.println("username:" + username + "   password:" + password);
 		log.info("username:" + username + "   password:" + password);
 		
 		UserModel user = new UserModel();
@@ -62,13 +59,10 @@ public class LoginController extends BaseController{
 	 * @Author KOP
 	 * Create Date: 2014年11月2日 上午8:39:34
 	 */
-	@RequestMapping(value = "/loginByForm.do", method = RequestMethod.POST)
-	public ModelAndView loginByForm(UserModel user){
-		System.out.println("method: loginByForm");
-		System.out.println("username:" + user.getUsername() + "   password:" + user.getPassword());
+	@RequestMapping(value = "/app/demo/pub/loginByForm.do", method = RequestMethod.POST)
+	public ModelAndView loginByForm(@RequestBody UserModel user){
 		log.info("username:" + user.getUsername() + "   password:" + user.getPassword());
 		user.setId(UUID.randomUUID().toString());
-		
 		ModelAndView model = new ModelAndView();
 		model.setViewName("index");
 		model.addObject("user", user);
@@ -84,10 +78,8 @@ public class LoginController extends BaseController{
 	 * @Author KOP
 	 * Create Date: 2014年11月2日 上午8:39:34
 	 */
-	@RequestMapping(value = "/loginByJson.do", method = RequestMethod.POST)
+	@RequestMapping(value = "/app/demo/pub/loginByJson.do", method = RequestMethod.POST)
 	public ModelAndView loginByJson(@RequestBody UserModel userModel){
-		System.out.println("method: loginByJson");
-		System.out.println("username:" + userModel.getUsername() + "   password:" + userModel.getPassword());
 		log.info("username:" + userModel.getUsername() + "   password:" + userModel.getPassword());
 		userModel.setId(UUID.randomUUID().toString());
 		
@@ -101,6 +93,17 @@ public class LoginController extends BaseController{
 		model.addObject("msg", msg);
 		model.addObject("data", data);
 		return model;
+	}
+	
+	@RequestMapping(value="/login.do", method = RequestMethod.GET)
+	public String login(){
+		log.info("start login");
+		return "login";
+	}
+	
+	@RequestMapping(value="/home.do", method = RequestMethod.GET)
+	public String home(){
+		return "index";
 	}
 	
 }

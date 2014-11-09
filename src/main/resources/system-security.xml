@@ -13,12 +13,14 @@
 	<sec:http pattern="/script/**" security="none" />
 	
 	<!-- config default login page -->
-	<!-- <http pattern="/login.jsp" security="none"/> -->
+	<http pattern="/login.do" security="none"/>
 	
 	<http auto-config="true">
 		<intercept-url pattern="/**" access="ROLE_USER" />
-		<form-login/>
-		<logout />
+		<form-login login-page="/login.do" username-parameter="username" password-parameter="password"
+			default-target-url="/home.do" always-use-default-target="true"/>
+		<logout logout-url="/j_spring_security_logout"
+			logout-success-url="/login.do" invalidate-session="true"/>
 	</http>
 	<authentication-manager alias="authenticationManager">
 		<authentication-provider>

@@ -28,8 +28,8 @@
 	
 	<div>
 		<center>
-		<!-- <form id="loginByModelMap" action="app/demo/pub/loginByModelMap.do" method="post"> -->
-		<form id="loginByModelMap" action="/ctosii_middle/j_spring_security_check" method="post">
+		<form id="loginByModelMap" action="app/demo/pub/loginByModelMap.do" method="post">
+		<!-- <form id="loginByModelMap" action="/ctosii_middle/j_spring_security_check" method="post"> -->
 		<table>
 			<tr><td><label>姓名：</label><input type="text" width="150" id="j_username" name="j_username"/></td></tr>
 			<tr><td><label>密码：</label><input type="password" width="150" id="j_password" name="j_password"/></td></tr>
