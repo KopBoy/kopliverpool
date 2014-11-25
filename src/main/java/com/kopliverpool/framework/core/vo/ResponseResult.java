@@ -1,4 +1,4 @@
-package com.kopliverpool.framework.core.model;
+package com.kopliverpool.framework.core.vo;
 
 import java.io.Serializable;
 

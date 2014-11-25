@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
-import com.kopliverpool.framework.core.model.UploadFile;
+import com.kopliverpool.framework.core.vo.UploadFile;
 
 /** 
  *

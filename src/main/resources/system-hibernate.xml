@@ -101,7 +101,7 @@
 		</property>
 		<property name="annotatedClasses">
 			<list>
-				<value>com.kopliverpool.framework.hibernate.SimpleModel</value>
+				<value>com.kopliverpool.framework.hibernate.model.SimpleModel</value>
 			</list>
 		</property>
 		<property name="hibernateProperties">

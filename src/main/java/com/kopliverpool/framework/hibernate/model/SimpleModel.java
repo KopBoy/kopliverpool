@@ -1,4 +1,4 @@
-package com.kopliverpool.framework.hibernate;
+package com.kopliverpool.framework.hibernate.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Table;

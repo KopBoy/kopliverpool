@@ -1,4 +1,4 @@
-package com.kopliverpool.framework.hibernate;
+package com.kopliverpool.framework.hibernate.model;
 
 import java.io.Serializable;
 import java.util.Date;

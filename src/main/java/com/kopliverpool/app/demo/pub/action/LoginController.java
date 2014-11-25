@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.kopliverpool.app.demo.pub.model.UserModel;
+import com.kopliverpool.framework.core.model.UserModel;
 import com.kopliverpool.framework.springmvc.BaseController;
 
 /** 

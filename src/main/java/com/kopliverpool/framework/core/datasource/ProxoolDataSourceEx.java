@@ -27,7 +27,6 @@ public class ProxoolDataSourceEx extends ProxoolDataSource{
             try {
                 conn = super.getConnection();
             } catch (SQLException e) {
-               // e.printStackTrace();
                 String methodName = e.getStackTrace()[0].getMethodName();
                 if (methodName.equalsIgnoreCase("checkSimultaneousBuildThrottle") ||
                         methodName.equalsIgnoreCase("quickRefuse")) {

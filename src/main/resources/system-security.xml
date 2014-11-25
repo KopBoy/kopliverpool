@@ -28,22 +28,24 @@
 			logout-success-url="/showloginPage.do" invalidate-session="true"/>
 	</sec:http>
 	<sec:authentication-manager>
-		<sec:authentication-provider user-service-ref="userService"> <!--   -->
-			<!-- <sec:user-service>
-				<sec:user name="guest" password="123456" authorities="ROLE_USER"/>
-				<sec:user name="admin" password="123456" authorities="ROLE_USER, ROLE_ADMIN"/>
-			</sec:user-service> -->
+		<sec:authentication-provider user-service-ref="userDetailService"> <!--   -->
 		</sec:authentication-provider>
 	</sec:authentication-manager>
-<!-- 	<authentication-manager alias="authenticationManager">
+	
+	<bean id="userDetailService" class="com.kopliverpool.framework.core.handler.UserDetailHandler"></bean>
+
+	<!--	
+ 	<authentication-manager alias="authenticationManager">
 		<authentication-provider user-service-ref="userService">
 			<user-service>
 				<user authorities="ROLE_USER" name="guest" password="guest" />
 				<user authorities="ROLE_USER, ROLE_ADMIN" name="admin" password="admin" />
 			</user-service>
 		</authentication-provider>
-	</authentication-manager> -->
+	</authentication-manager> 
+	-->
 
+	<!-- 
 	<bean id="userService"
 		class="com.kopliverpool.framework.security.InMemoryChangePasswordDaoImpl">
 		<property name="userProperties">
@@ -53,5 +55,6 @@
 			</props>
 		</property>
 	</bean>
+	 -->
 
 </beans>
