@@ -7,6 +7,15 @@
 <body>
 	<center>
 		欢迎【${user.username}】来到首页！
+		<br />
+		<#list users as user> 
+   			<tr>
+   				<td>用户名：${user.username}</td>
+   				<td>密码:${user.password}</td>
+   			</tr>
+   			<br />
+		</#list>
 	</center>
+	
 </body>
 </html>

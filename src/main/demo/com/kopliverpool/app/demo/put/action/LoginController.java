@@ -1,5 +1,7 @@
 package com.kopliverpool.app.demo.put.action;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
@@ -55,7 +57,7 @@ public class LoginController extends BaseController{
 	}
 	
 	/**
-	 * Description: RequestParam注解的使用方法，ModelMap的使用方法（相当于session）
+	 * Description: RequestParam注解的使用方法，FreeMaker的使用方法
 	 *
 	 * @param 
 	 * @return String
@@ -72,6 +74,11 @@ public class LoginController extends BaseController{
 		user.setUsername(username);
 		user.setPassword(password);
 		map.put("user", user);
+		
+		List<UserModel> users = new ArrayList<UserModel>();
+		users.add(user);
+		users.add(user);
+		map.put("users", users);
 		return "home";
 	}
 	
