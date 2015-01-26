@@ -1,4 +1,4 @@
-package com.kopliverpool.app.demo.pub.action;
+package com.kopliverpool.app.demo.put.action;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;

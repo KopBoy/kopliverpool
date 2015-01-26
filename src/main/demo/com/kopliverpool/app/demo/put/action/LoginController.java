@@ -1,4 +1,4 @@
-package com.kopliverpool.app.demo.pub.action;
+package com.kopliverpool.app.demo.put.action;
 
 import java.util.UUID;
 
@@ -52,6 +52,27 @@ public class LoginController extends BaseController{
 		user.setPassword(password);
 		map.put("user", user);
 		return "index";
+	}
+	
+	/**
+	 * Description: RequestParam注解的使用方法，ModelMap的使用方法（相当于session）
+	 *
+	 * @param 
+	 * @return String
+	 * @throws 
+	 * @Author KOP
+	 * Create Date: 2014年11月2日 上午8:39:34
+	 */
+	@RequestMapping(value = "/app/demo/pub/loginByModelMapToFreeMaker", method = RequestMethod.POST)
+	public String loginByModelMapToFreeMaker(@RequestParam("j_username") String username, @RequestParam("j_password") String password, ModelMap map){
+		log.info("username:" + username + "   password:" + password);
+		
+		UserModel user = new UserModel();
+		user.setId(UUID.randomUUID().toString());
+		user.setUsername(username);
+		user.setPassword(password);
+		map.put("user", user);
+		return "home";
 	}
 	
 	/**

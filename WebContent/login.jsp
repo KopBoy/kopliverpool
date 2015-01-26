@@ -16,6 +16,7 @@
 <body>
 	<div>
 		<center>
+		<h3>Ajax Json登录</h3>
 		<form id="formByJson">
 		<table>
 			<tr><td><label>姓名：</label><input type="text" width="150" id="username" name="username"/></td></tr>
@@ -25,9 +26,11 @@
 		</form>
 		</center>
 	</div>
+	<br />
 	
 	<div>
 		<center>
+		<h3>Map Form表单提交登录</h3>
 		<form id="loginByModelMap" action="app/demo/pub/loginByModelMap.do" method="post">
 		<!-- <form id="loginByModelMap" action="/ctosii_middle/j_spring_security_check" method="post"> -->
 		<table>
@@ -38,9 +41,27 @@
 		</form>
 		</center>
 	</div>
+	<br />
 	
 	<div>
 		<center>
+		<h3>Map Form表单登录跳转FreeMaker</h3>
+		<form id="loginByModelMapToFreeMaker" action="app/demo/pub/loginByModelMapToFreeMaker.html" method="post">
+		<!-- <form id="loginByModelMap" action="/ctosii_middle/j_spring_security_check" method="post"> -->
+		<table>
+			<tr><td><label>姓名：</label><input type="text" width="150" id="j_username" name="j_username"/></td></tr>
+			<tr><td><label>密码：</label><input type="password" width="150" id="j_password" name="j_password"/></td></tr>
+			<tr><td><input id="loginBut" type="submit" value="loginByModelMapToFreeMaker登录"/></td></tr>
+		</table>
+		</form>
+		</center>
+	</div>
+	
+	
+	<br />
+	<div>
+		<center>
+		<h3>Map Form表单转换对象登录</h3>
 		<form id="loginByForm" action="app/demo/pub/loginByForm.do" method="post">
 		<table>
 			<tr><td><label>姓名：</label><input type="text" width="150" id="username" name="username"/></td></tr>
