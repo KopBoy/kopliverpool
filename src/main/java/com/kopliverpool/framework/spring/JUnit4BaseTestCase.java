@@ -31,20 +31,20 @@ public class JUnit4BaseTestCase implements ApplicationContextAware{
 
 	protected final Log log = LogFactory.getLog(getClass());
 	
-	/**
-	 * The {@link ApplicationContext} that was injected into this test instance
-	 * via {@link #setApplicationContext(ApplicationContext)}.
-	 */
 	protected ApplicationContext applicationContext;
 
-	/**
-	 * Set the {@link ApplicationContext} to be used by this test instance,
-	 * provided via {@link ApplicationContextAware} semantics.
-	 */
 	public final void setApplicationContext(final ApplicationContext applicationContext) {
 		this.applicationContext = applicationContext;
 	}
 	
+	 /**
+	 * Description: 初始化SpringUtil
+	 *
+	 * @return void
+	 * @throws 
+	 * @Author KOP
+	 * Create Date: 2015年1月26日 上午9:06:22
+	 */
 	@Before
 	public void init(){
 		log.info("开始初始化SpringUitl。。。");
