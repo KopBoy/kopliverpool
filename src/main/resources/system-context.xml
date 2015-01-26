@@ -40,6 +40,6 @@
 	<!-- 导入Spring Security配置 -->
 	<import resource="classpath:system-hibernate.xml"/>
 	<!-- 导入Spring Security配置 -->
-	<import resource="classpath:system-security.xml"/>
+	<!-- <import resource="classpath:system-security.xml"/> -->
 	
 </beans>
