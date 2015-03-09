@@ -4,7 +4,7 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/demo"/>
-        <property name="context-root" value="kopliverpool"/>
         <property name="java-output-path" value="/kopliverpool/build/classes"/>
+        <property name="context-root" value="kop"/>
     </wb-module>
 </project-modules>
