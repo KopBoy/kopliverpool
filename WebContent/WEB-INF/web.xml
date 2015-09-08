@@ -69,7 +69,7 @@
 
 
 	<!-- servlet 配置 -->
-	<!-- <servlet>
+	<servlet>
 		<description>SpringMVC调度器</description>
 		<servlet-name>springmvc</servlet-name>
 		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
@@ -82,7 +82,7 @@
 	<servlet-mapping>
 		<servlet-name>springmvc</servlet-name>
 		<url-pattern>*.do</url-pattern>
-	</servlet-mapping> -->
+	</servlet-mapping>
 	
 	<servlet>
 		<description>SpringMVC调度器,集成FreeMaker</description>
