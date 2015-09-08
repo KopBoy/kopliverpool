@@ -6,15 +6,28 @@
 </head>
 <body>
 	<center>
-		欢迎【${user.username}】来到首页！
+		欢迎【${USER.username}】来到首页！
+		
+		<s:if test="1 == 1">
+			aaaaa
+		</s:if>
+		<s:else>
+			bbbbb
+		</s:else>
+		
+		<#-- <s:if test="${USER == Null}">
+			欢迎【${USER.username}】来到首页！
+		</s:if><s:else>
+			欢迎【游客】来到首页！
+		</s:else> -->
 		<br />
-		<#list users as user> 
+		<#-- <#list users as user> 
    			<tr>
    				<td>用户名：${user.username}</td>
    				<td>密码:${user.password}</td>
    			</tr>
    			<br />
-		</#list>
+		</#list> -->
 	</center>
 	
 </body>

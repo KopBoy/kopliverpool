@@ -12,8 +12,8 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
+import com.kopliverpool.app.demo.put.model.UserModel;
 import com.kopliverpool.framework.core.mgr.UserDetailMgr;
-import com.kopliverpool.framework.core.model.UserModel;
 
 public class UserDetailHandler implements UserDetailsService {
 	

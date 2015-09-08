@@ -6,6 +6,7 @@ import java.util.UUID;
 
 import javax.servlet.http.HttpServletRequest;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
@@ -16,7 +17,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.kopliverpool.framework.core.model.UserModel;
+import com.kopliverpool.app.demo.DemoConst;
+import com.kopliverpool.app.demo.put.mgr.LoginMgr;
+import com.kopliverpool.app.demo.put.model.UserModel;
 import com.kopliverpool.framework.springmvc.BaseController;
 
 /** 
@@ -34,6 +37,9 @@ import com.kopliverpool.framework.springmvc.BaseController;
 */
 @Controller
 public class LoginController extends BaseController{
+	
+	@Autowired
+	public LoginMgr loginMgr;
 
 	/**
 	 * Description: RequestParam注解的使用方法，ModelMap的使用方法（相当于session）
@@ -69,17 +75,14 @@ public class LoginController extends BaseController{
 	public String loginByModelMapToFreeMaker(@RequestParam("j_username") String username, @RequestParam("j_password") String password, ModelMap map){
 		log.info("username:" + username + "   password:" + password);
 		
-		UserModel user = new UserModel();
-		user.setId(UUID.randomUUID().toString());
-		user.setUsername(username);
-		user.setPassword(password);
-		map.put("user", user);
-		
-		List<UserModel> users = new ArrayList<UserModel>();
-		users.add(user);
-		users.add(user);
-		map.put("users", users);
-		return "home";
+		UserModel user = loginMgr.findUserByUsernameAndPwd(username, password);
+		if(user != null){
+			map.put(DemoConst.USER_KEY, user);
+			return "home";
+		}else {
+			log.error("用户【" + username + "】登录失败");
+			return "home";
+		}
 	}
 	
 	/**

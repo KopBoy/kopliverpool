@@ -1,4 +1,4 @@
-package com.kopliverpool.framework.core.model;
+package com.kopliverpool.app.demo.put.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
