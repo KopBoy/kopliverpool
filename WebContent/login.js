@@ -41,7 +41,7 @@ $(function(){
                 log.debug("username:" + result.data.username + "   pwd:" + result.data.password);
         },  
             error: function(){  
-                log.error("error");  
+                log.error("error -->" + "状态码:" + result.code + "    状态信息:" + result.msg);  
             }  
         });  
     }); 
