@@ -40,8 +40,11 @@ $(function(){
                 log.debug("状态码:" + result.code + "    状态信息:" + result.msg + "   结果集：" + result.data.length);  
                 log.debug("username:" + result.data.username + "   pwd:" + result.data.password);
         },  
-            error: function(){  
-                log.error("error -->" + "状态码:" + result.code + "    状态信息:" + result.msg);  
+            error: function(result){  
+                log.error("error -->");
+                for(p in result){
+                	log.error("属性名：" + p + "  属性值：" + result.p);
+                }
             }  
         });  
     }); 
