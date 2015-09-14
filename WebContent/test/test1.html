@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ExtJs练习</title>
+
+<link rel="stylesheet"  type="text/css" href="../script/lib/extjs/resources/css/ext-all.css"/>
+</head>
+<body>
+<div id="div1">
+	MyDiv Text
+	<a href="#" id="href1"></a>
+</div>
+
+<script type="text/javascript" src="../script/lib/extjs/adapter/ext/ext-base-debug.js"></script>
+<script type="text/javascript" src="../script/lib/extjs/ext-all-debug.js" ></script>
+
+<script type="text/javascript">
+	Ext.onReady(function(){
+		Ext.MessageBox.alert("OnReady", "The Dom is ready!")
+	});
+	
+	Ext.get("div1").addEventListener("clcik", function(eventObj, elRef){
+		console.log("div1 click Handler, source elment ID:" + elRef.id);
+	}, true);
+</script>
+
+</body>
+
+</html>
